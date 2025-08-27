@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -115,10 +116,12 @@ const Dashboard = () => {
                 <p className="text-xs text-muted-foreground mb-2">{book.author}</p>
                 <div className="flex items-center justify-between text-xs">
                   <Badge variant="secondary">{book.condition}</Badge>
-                  <span className="text-muted-foreground flex items-center">
-                    <MapPin size={12} className="mr-1" />
-                    {book.distance}
-                  </span>
+                  <Link to="/checkout">
+                    <span className="text-muted-foreground flex items-center hover:text-primary cursor-pointer">
+                      <MapPin size={12} className="mr-1" />
+                      {book.distance}
+                    </span>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -156,9 +159,11 @@ const Dashboard = () => {
                   <p className="text-sm opacity-90">Share books you've finished reading</p>
                 </div>
               </div>
-              <Button variant="secondary" className="mt-4 w-full">
-                Add Book
-              </Button>
+              <Link to="/add-book">
+                <Button variant="secondary" className="mt-4 w-full">
+                  Add Book
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -167,13 +172,15 @@ const Dashboard = () => {
               <div className="flex items-center space-x-4">
                 <Coins size={32} />
                 <div>
-                  <h3 className="font-semibold">Earn Rewards</h3>
-                  <p className="text-sm opacity-90">Complete challenges for bonus points</p>
+                  <h3 className="font-semibold">Active Exchanges</h3>
+                  <p className="text-sm opacity-90">Check your ongoing book exchanges</p>
                 </div>
               </div>
-              <Button variant="secondary" className="mt-4 w-full">
-                View Challenges
-              </Button>
+              <Link to="/exchange">
+                <Button variant="secondary" className="mt-4 w-full">
+                  View Exchange
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </section>

@@ -25,11 +25,9 @@ const Auth = () => {
       <div className="w-full max-w-md animate-fade-in">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <img 
-              src="/lovable-uploads/c5eb8eb4-4847-46db-988c-459d7cea44ed.png" 
-              alt="Bookhive"
-              className="h-12 w-auto"
-            />
+              <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-bold">BH</span>
+              </div>
             <h1 className="text-3xl font-bold text-primary-foreground">Bookhive</h1>
           </div>
           <p className="text-primary-foreground/80">Join the sustainable book community</p>

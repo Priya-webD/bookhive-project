@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, BarChart, Trophy, LogOut, Menu, X } from "lucide-react";
+import { Home, BarChart, Trophy, LogOut, Menu, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -11,6 +11,7 @@ const Navigation = () => {
     { path: "/dashboard", label: "Home", icon: Home },
     { path: "/analytics", label: "Analytics", icon: BarChart },
     { path: "/rewards", label: "Rewards", icon: Trophy },
+    { path: "/profile", label: "Profile", icon: User },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -21,11 +22,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/c5eb8eb4-4847-46db-988c-459d7cea44ed.png" 
-              alt="Bookhive"
-              className="h-10 w-auto"
-            />
+            <div className="w-10 h-10 bg-gradient-hero rounded-full flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">BH</span>
+            </div>
             <span className="text-xl font-bold text-primary">Bookhive</span>
           </Link>
 

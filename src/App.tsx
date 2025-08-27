@@ -7,6 +7,10 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Analytics from "./pages/Analytics";
 import Rewards from "./pages/Rewards";
+import Profile from "./pages/Profile";
+import Checkout from "./pages/Checkout";
+import AddBook from "./pages/AddBook";
+import Exchange from "./pages/Exchange";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +27,10 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/rewards" element={<Rewards />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/add-book" element={<AddBook />} />
+          <Route path="/exchange" element={<Exchange />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
