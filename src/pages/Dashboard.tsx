@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Search, MapPin, Star, Leaf, Coins, BookOpen, Sparkles, Heart, Zap } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import floatingElements from "@/assets/floating-elements.jpg";
+import TypewriterText from "@/components/TypewriterText";
 
 const Dashboard = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -75,8 +76,12 @@ const Dashboard = () => {
           <div className="absolute -top-4 -right-4 text-4xl animate-bounce-gentle">
             <Sparkles className="text-warning animate-glow-pulse" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-success to-accent bg-clip-text text-transparent mb-4 animate-glow-pulse">
-            Good morning, Sarah! 🌱
+          <h1 className="text-4xl md:text-6xl mb-4 relative">
+            <TypewriterText 
+              text="Good morning, Sarah! 🌱"
+              speed={80}
+              className="drop-shadow-lg"
+            />
           </h1>
           <p className="text-lg text-muted-foreground mb-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             Ready to discover your next great read?

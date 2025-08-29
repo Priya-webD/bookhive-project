@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -135,6 +138,14 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'typewriter': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'cursor-blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
 				}
 			},
 			animation: {
@@ -147,7 +158,9 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'wiggle': 'wiggle 1s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'background-shift': 'background-shift 8s ease-in-out infinite'
+				'background-shift': 'background-shift 8s ease-in-out infinite',
+				'typewriter': 'typewriter 3s steps(40, end) forwards',
+				'cursor-blink': 'cursor-blink 1s infinite'
 			}
 		}
 	},
