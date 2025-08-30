@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -81,11 +84,17 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-eco': 'var(--gradient-eco)',
-				'gradient-warm': 'var(--gradient-warm)'
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-magical': 'var(--gradient-magical)',
+				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-ocean': 'var(--gradient-ocean)'
 			},
 			boxShadow: {
 				'brand': 'var(--shadow-brand)',
-				'lift': 'var(--shadow-lift)'
+				'lift': 'var(--shadow-lift)',
+				'magical': 'var(--shadow-magical)',
+				'glow': 'var(--shadow-glow)',
+				'float': 'var(--shadow-float)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -111,6 +120,32 @@ export default {
 				'bounce-gentle': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-4px)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'33%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'66%': { transform: 'translateY(5px) rotate(-1deg)' }
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.3)' },
+					'50%': { boxShadow: '0 0 40px hsl(var(--primary) / 0.6)' }
+				},
+				'background-shift': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'typewriter': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'cursor-blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
 				}
 			},
 			animation: {
@@ -119,7 +154,13 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in': 'slide-in 0.4s ease-out',
 				'pulse-eco': 'pulse-eco 2s ease-in-out infinite',
-				'bounce-gentle': 'bounce-gentle 1s ease-in-out infinite'
+				'bounce-gentle': 'bounce-gentle 1s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'background-shift': 'background-shift 8s ease-in-out infinite',
+				'typewriter': 'typewriter 3s steps(40, end) forwards',
+				'cursor-blink': 'cursor-blink 1s infinite'
 			}
 		}
 	},
